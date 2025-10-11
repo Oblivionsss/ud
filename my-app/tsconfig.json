@@ -1,0 +1,28 @@
+// my-adaptive-app/tsconfig.json
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "commonjs",
+    "lib": ["es2021", "dom"],
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["./*"] // Важно для разрешения алиасов вроде "~/server/db"
+    }
+  },
+  "include": [
+    "server/**/*.ts",
+    "client/**/*.tsx",
+    "client/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
